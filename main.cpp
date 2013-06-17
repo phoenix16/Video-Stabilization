@@ -22,7 +22,7 @@ void writeVideo(const string pathToImages, const string videoName, double fps, i
 
 int main()
 {
-    string pathToImages = "/home/prakriti/projects/Datasets/VideoStabilization/cam2";
+    string pathToImages = "/VideoStabilization/data";
 
     VideoWriter outputVideo1, outputVideo2;
     outputVideo1.open("source.avi", 1145656920, 30, Size(480, 360), true);   // X-VID MPEG4 code = 1145656920
