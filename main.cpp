@@ -1,3 +1,7 @@
+/*
+ * Developer : Prakriti Chintalapoodi - c.prakriti@gmail.com 
+*/
+
 #include "MotionEstimator.h"
 
 #define PI 3.1415926535;
@@ -14,9 +18,7 @@ void mouse_click(int event, int x, int y, int flags, void *param);
 
 int main(int argc, char* argv[])
 {
-<<<<<<< HEAD
     if (argc != 2)
-=======
     string pathToImages = "/VideoStabilization/data";
 
     VideoWriter outputVideo1, outputVideo2;
@@ -115,7 +117,6 @@ void findHomographyMatrix(Mat& image1, Mat& image2, Mat& homography)
     // construct Homography (Projective Transformation)
     std::vector< DMatch > good_matches;
     for (int i = 0; i < descriptors_image1.rows; i++)
->>>>>>> 73485e3b3e13c3b03491db9096276654bd26698f
     {
         cout << "Usage: ./Video-Stabilization <Input Video file>" << endl;
         return -1;

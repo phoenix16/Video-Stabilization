@@ -1,3 +1,7 @@
+/*
+ * Developer : Prakriti Chintalapoodi - c.prakriti@gmail.com 
+*/
+
 #include "MotionEstimator.h"
 
 MotionEstimator::MotionEstimator(Mat& roi, Point offsetPt)
@@ -13,10 +17,6 @@ MotionEstimator::MotionEstimator(Mat& roi, Point offsetPt)
 	// Affine transformation needs 3 pairs of points
 	inputPts.resize(3);
 	outputPts.resize(3);
-
-	// Affine transformation needs 4 pairs of points
-	//inputPts.resize(4);
-	//outputPts.resize(4);
 }
 
 // Feature point detection
