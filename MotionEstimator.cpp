@@ -1,6 +1,6 @@
-/*
- * Developer : Prakriti Chintalapoodi - c.prakriti@gmail.com 
-*/
+//
+// Developer : Prakriti Chintalapoodi - c.prakriti@gmail.com 
+//
 
 #include "MotionEstimator.h"
 
@@ -74,24 +74,12 @@ void MotionEstimator::performFeatureDetection(Mat& frameIn)
     //for (size_t i = 0; i < points[1].size(); i++)
 	for (size_t i = 0; i < 3; i++)  // check every feature point
     {
-		//if ( status[i] == 0 )
-  //          continue;
-  //      // Don't consider points rejected by optical flow
-  //      //            (status[i] &&
-		//// Or points that did not move
-  //      //            (abs(points[0][i].x - points[1][i].x) +
-  //      //            (abs(points[0][i].y - points[1][i].y)) > 2));
-  //      numValid++;
-
-		inputPts[k] = points[0][i];
-		outputPts[k] = points[1][i];
+	inputPts[k] = points[0][i];
+	outputPts[k] = points[1][i];
 		
-		//cout << inputPts[k] << endl;
-		//cout << outputPts[k] << endl <<endl;
-		k++;
+	k++;
 
-
-	    Point p,q;
+	Point p,q;
         p.x = (int) points[0][i].x;
         p.y = (int) points[0][i].y;
         q.x = (int) points[1][i].x;
@@ -125,7 +113,7 @@ Mat MotionEstimator::applyAffine(Mat& frameIn)
 {	
 	findAffine();
 	Mat input = frameIn.clone();
-	// IMPORTANT: The affine transformation estimated above is a mapping from reference frame
+	// NOTE: The affine transformation estimated above is a mapping from reference frame
 	// to current frame. In order to correct this in the current frame, 
 	// the INVERSE mapping needs to be applied
 	warpAffine(input, warpedFrame, transform, refFrame.size(), WARP_INVERSE_MAP);
