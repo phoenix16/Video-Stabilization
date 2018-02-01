@@ -1,6 +1,6 @@
-/*
- * Developer : Prakriti Chintalapoodi - c.prakriti@gmail.com 
-*/
+//
+// Developer : Prakriti Chintalapoodi - c.prakriti@gmail.com 
+//
 
 #include "MotionEstimator.h"
 
@@ -216,8 +216,6 @@ void findHomographyMatrix(Mat& image1, Mat& image2, Mat& homography)
     return 0;
 }
 
-
-
 // Records mouseclick events to get x-y coordinates of ROI
 // Store coordinates in global variables pt1, pt2.
 void mouse_click(int event, int x, int y, int flags, void *param)
@@ -260,5 +258,5 @@ void mouse_click(int event, int x, int y, int flags, void *param)
         }
         break;
     }
-    }
+  }
 }
